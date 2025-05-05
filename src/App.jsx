@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="" element={<HomePage />} />
         <Route path="/login" element={<AuthForm />} />
         <Route 
           path="/home" 
@@ -23,7 +23,7 @@ function App() {
             </ProtectedRoute>
           } 
         />
-        
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
