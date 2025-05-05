@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { auth } from "./firebase";
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router';
 import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut,
 } from "firebase/auth";
-
 export default function AuthForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -146,6 +145,11 @@ export default function AuthForm() {
                     </>
                 )}
             </div>
+            {
+                <Link to="/" style={{ textDecoration: "none", color: "#007bff", marginTop: "1rem" }}>
+                    Go to Home
+                </Link>
+            }
         </div>
     );
 }

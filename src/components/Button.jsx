@@ -1,4 +1,4 @@
-
+import { Link } from "react-router";
 
 function Button({ label , route}) {
   return (
