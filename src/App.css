@@ -1,0 +1,163 @@
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container button {
+    width: 50%;
+    height: 10vh;
+    font-family: 'Rowdies', cursive;
+    font-size: 2rem;
+    margin: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #bae8e8;
+    color: #272343;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.container button:hover {
+    background-color: #e3f6f5;
+    transform: scale(1.05);
+}
+
+.fade-in-buttons {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in-buttons.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  .notFound{
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .notFound h1{
+    font-family: 'Rowdies', cursive;
+    font-size: 5rem;
+    color: #272343;
+    margin: 10px;
+  }
+  .notFound p {
+    font-family: 'Rowdies', cursive;
+    font-size: 2rem;
+    color: #2723438b;
+  }
+
+  .header {
+    width: 100%;
+    height: 10vh;
+    background-color: #272343;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header h1 {
+    font-family: 'Rowdies', cursive;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-left: 20px;
+  }
+
+  .header ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    right: -30vh;
+  }
+
+  .header ul li {
+    margin: 0 10px;
+  }
+
+  .header ul li a {
+    text-decoration: none;
+    color: #ffffff8c;
+    font-family: 'Rowdies', cursive;
+    font-size: 1.5rem;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+  }
+
+  .header ul li a:hover {
+    color: #ffffff;
+    background-color: #2723438b;
+    border-radius: 10px;
+  }
+
+  .header .i {
+    display: none;
+}
+
+  @media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .header ul li a {
+        font-size: 1rem;
+    }
+    .container button {
+        font-size: 1.5rem;
+        height: 8vh;
+    }
+    .notFound h1 {
+        font-size: 3rem;
+    }
+    .notFound p {
+        font-size: 1.5rem;
+    }
+    .header ul li a {
+        font-size: 1rem;
+    }
+
+    .header ul {
+        position: absolute;
+        top: 10vh;
+        z-index: 3;
+        background-color: #272343;
+        height: 90vh;
+        flex-direction: column;
+        width: 30vh;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        transition: 0.2s ease-in-out;
+    }
+
+    .header ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0 10px 0;
+        padding-bottom: 10px;
+    }
+
+    .header .i {
+        color: #ffffff;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    
+  }

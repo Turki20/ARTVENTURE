@@ -1,0 +1,41 @@
+
+.buttonSection {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0; /* تبدأ الشفافية بـ 0 لتختفي */
+    transform: translateY(50px); /* تبدأ الأزرار أسفل الصفحة */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* تأثيرات الحركة */
+}
+
+.buttonSection button {
+    width: 50%;
+    height: 10vh;
+    font-family: 'Rowdies', cursive;
+    font-size: 2rem;
+    margin: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color: #bae8e8;
+    color: #272343;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.buttonSection button:hover {
+    background-color: #e3f6f5;
+    transform: scale(1.05);
+}
+
+.buttonSection .show {
+    opacity: 1; /* عندما تظهر الأزرار */
+    transform: translateY(0); /* تتحرك للأعلى */
+  }
+  

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+.hero-section {
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #272343;
+    position: relative;
+
+}
+
+.hero-section h1 {
+    font-family: 'Rowdies', cursive;
+    font-size: 4rem;
+    margin: 0;    
+}
+
+.hero-section p {
+    color: #2723438f;
+}
+
+.hero-section img{
+    position: absolute;
+    width: 10%;
+    z-index: 100;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px rgba(122, 122, 122, 0.833);
+    filter: blur(2px);
+    opacity: 1;
+    transform: translateY(0);
+    animation: riseIn 1s ease-out;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hero-text {
+    font-family: 'Rowdies', cursive;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+  }
+  
+@keyframes riseIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+.hero-section #m1 {
+    top: 20vh;
+    left: 0vw;
+    width: 13%;
+}
+
+.hero-section #m2 {
+    top: 15vh;
+    left: 65vw;
+    filter: blur(0px);
+    width: 15%;
+}
+
+.hero-section #m3 {
+    top: 40vh;
+    right: 1vw;
+    filter: blur(0.5px);
+}
+
+.hero-section #m4 {
+    top: 15vh;
+    left: 25vw;
+    filter: blur(0.5px);
+
+}
+
+.hero-section #m5 {
+    bottom: 3vh;
+    right: 10vw;
+}
+
+.hero-section #m6 {
+    bottom: -10vh;
+    left: 10vw;
+    filter: blur(1px);
+    width: 15%;
+}
+
+.hero-section #m7 {
+    bottom: 15vh;
+    left: 45vw;
+}
+
+
