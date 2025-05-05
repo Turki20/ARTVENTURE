@@ -1,6 +1,6 @@
 {
+  "name": "react-gh-pages",
   "homepage": "https://github.com/Turki20/ARTVENTURE",
-  "name": "artventure",
   "private": true,
   "version": "0.0.0",
   "type": "module",
