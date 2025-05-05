@@ -11,9 +11,9 @@ import { BrowserRouter, Routes, Route } from 'react-router';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ARTVENTURE">
       <Routes>
-        <Route path="" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<AuthForm />} />
         <Route 
           path="/home" 
