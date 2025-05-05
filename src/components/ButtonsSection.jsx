@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import Button from "./Button";
 const ButtonsSection = () => {
     const [showButtons, setShowButtons] = useState(false);
 
@@ -22,12 +23,7 @@ const ButtonsSection = () => {
 
   return (
     <div className="buttonSection" style={{ opacity: showButtons ? 1 : 0, transform: showButtons ? "translateY(0)" : "translateY(50px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>
-      <button >{<Link to={'/home'} style={{
-        textDecoration: "none",
-      }}>Explore</Link>}</button>
-      <button >{<Link to={'/'} style={{
-        textDecoration: "none",
-      }}>Quiz</Link>}</button>
+      <Button label="Explore" route="/home" />
     </div>
   );
 };
