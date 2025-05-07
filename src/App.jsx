@@ -6,13 +6,15 @@ import HomePage from './pages/homePage';
 import NotFound from './pages/NotFound';
 import ArtsPage from './pages/ArtsPage';
 import AuthForm from './pages/login.jsx';
+import Profile from './pages/Profile.jsx';
 import ProtectedRoute from './pages/ProtectedRoute';
 import { BrowserRouter, Routes, Route } from 'react-router';
 
 function App() {
   return (
-    <BrowserRouter basename="/ARTVENTURE">
-      <Routes>
+    // <BrowserRouter basename="/ARTVENTURE">
+    <BrowserRouter>
+    <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<AuthForm />} />
         <Route 
@@ -20,6 +22,14 @@ function App() {
           element={
             <ProtectedRoute>
               <ArtsPage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/profile" 
+          element={
+            <ProtectedRoute>
+              <Profile />
             </ProtectedRoute>
           } 
         />

@@ -1,6 +1,7 @@
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import { auth } from "../pages/firebase";
 import { signOut } from "firebase/auth";
+
 import { useState, useRef } from "react";
 
 function Header() {
@@ -42,7 +43,9 @@ function Header() {
             </svg>
             <ul ref={menuRef} style={{ right: "-30vh", transition: "right 0.3s" }}>
                 <li>
-                    <button onClick={handleLogout} style={{ background: "none", border: "none", color: "white", cursor: "pointer" }}>
+                    <button style={{ background: "none", border: "none", color: "white", cursor: "pointer" }}><Link to={'/profile'}>Profile</Link></button>
+                    <button style={{ background: "none", border: "none", color: "white", cursor: "pointer" }}><Link to={'/home'}>Home</Link></button>
+                    <button onClick={handleLogout} style={{ background: "red",padding: "10px", border: "none", color: "white", cursor: "pointer" }}>
                         Logout
                     </button>
                 </li>
