@@ -1,6 +1,7 @@
 // src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // هذا هو إعدادك اللي نسخته من Firebase Console
 const firebaseConfig = {
@@ -18,5 +19,6 @@ const app = initializeApp(firebaseConfig);
 
 // تهيئة auth
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-export { auth };
+export { auth ,db };

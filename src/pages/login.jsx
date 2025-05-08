@@ -145,11 +145,7 @@ export default function AuthForm() {
                     </>
                 )}
             </div>
-            {
-                <Link to="/" style={{ textDecoration: "none", color: "#007bff", marginTop: "1rem" }}>
-                    Go to Home
-                </Link>
-            }
+            
         </div>
     );
 }

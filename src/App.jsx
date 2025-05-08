@@ -10,11 +10,14 @@ import Profile from './pages/Profile.jsx';
 import ProtectedRoute from './pages/ProtectedRoute';
 import { BrowserRouter, Routes, Route } from 'react-router';
 
+// ✅ استيراد Toast
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
-    // <BrowserRouter basename="/ARTVENTURE">
     <BrowserRouter>
-    <Routes>
+      <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<AuthForm />} />
         <Route 
@@ -35,6 +38,9 @@ function App() {
         />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      {/* ✅ عشان الإشعارات تشتغل */}
+      <ToastContainer position="top-right" autoClose={2000} />
     </BrowserRouter>
   );
 }
